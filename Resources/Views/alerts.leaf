@@ -1,0 +1,37 @@
+<!--Error-->
+#if(request.storage._flash.error) {
+    <script type="text/javascript">
+    $(document).ready(function(){
+      toastr.error("#(request.storage._flash.error)")
+    });
+    </script>
+}
+
+<!--Success-->
+#if(request.storage._flash.success) {
+  <script type="text/javascript">
+  $(document).ready(function(){
+    toastr.success("#(request.storage._flash.success)")
+  });
+  </script>
+}
+
+<!--Warning-->
+#if(request.storage._flash.warning) {
+<div class="alert alert-warning alert-dismissible fade in to-be-animated-in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    #(request.storage._flash.warning)
+</div>
+}
+
+<!--Info-->
+#if(request.storage._flash.info) {
+<div class="alert alert-info alert-dismissible fade in to-be-animated-in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    #(request.storage._flash.info)
+</div>
+}

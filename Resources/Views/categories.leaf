@@ -1,0 +1,15 @@
+<div class="tabs is-toggle is-centered">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fa fa-road"></i></span>&ensp;<span class="cat-title">كل الحلول</span>
+      </a>
+    </li>
+    <li class="">
+      <a>
+        <span class="icon is-small"><i class="fa fa-road"></i></span>&ensp;<span class="cat-title">شوارع</span>
+      </a>
+    </li>
+
+  </ul>
+</div>

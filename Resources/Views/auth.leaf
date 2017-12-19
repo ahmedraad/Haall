@@ -1,0 +1,96 @@
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تسجيل دخول</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="/login">
+          <div class="form-group">
+            <label for="exampleInputEmail1">البريد الالكتروني</label>
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Your Email ...">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">كلمة المرور</label>
+            <input type="password" class="form-control" name="password" placeholder="Your Password ...">
+          </div>
+          <button type="submit" class="btn btn-primary">دخول</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Register Modal -->
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تسجيل حساب جديد</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="/register">
+          <div class="form-group">
+            <label for="exampleInputEmail1">الاسم</label>
+            <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">البريد الالكتروني</label>
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">كلمة المرور</label>
+            <input type="password" class="form-control" name="password" placeholder="Your Password">
+          </div>
+          <button type="submit" class="btn btn-primary">تسجيل</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Add Post Modal -->
+
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ساعد في حل مشكلة</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="add-post-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">العنوان</label>
+            <input type="text" class="form-control" name="title" placeholder="عنوان الحل والمشكلة">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">أختر القسم</label>
+            <select class="form-control" name="category_id">
+              #loop(categories, "category") {
+                <option value="#(category.id)">#(category.name)</option>
+              }
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">تفاصيل الحل</label>
+            <textarea class="form-control" name="content" rows="5"></textarea>
+          </div>
+          <button id="new-post-button" type="button" class="btn btn-primary">إضافة</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

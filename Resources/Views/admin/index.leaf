@@ -1,0 +1,12 @@
+#extend("admin/base")
+
+#export("title") {
+  Dashboard
+}
+
+#export("content") {
+  #embed("alerts")
+  #embed("admin/nav")
+  #embed("admin/content")
+  #embed("admin/footer")
+}

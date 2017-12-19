@@ -1,0 +1,12 @@
+#extend("base")
+
+#export("title") { #(post.title) }
+
+#export("content") {
+  #embed("header")
+  #embed("post")
+  #embed("auth")
+  #embed("footer")
+  #embed("alerts")
+  <script src="/js/app.js"></script>
+}

@@ -1,0 +1,57 @@
+#extend("admin/base")
+
+#export("title") {
+  Dashboard - Posts
+}
+
+#export("content") {
+  #embed("admin/nav")
+  #embed("alerts")
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Posts</li>
+      </ol>
+      <div class="table-responsive">
+        <table class="table table-bordered" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Created At</th>
+              <th>Category</th>
+              <th>Likes</th>
+              <th>Dislikes</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            #loop(posts.data, "post") {
+              <tr>
+                <td><a href="/dashboard/posts/#(post.id)">#(post.title)</a></td>
+                <td><a href="/dashboard/users/#(post.author.id)">#(post.author.name)</a></td>
+                <td>#(post.createdAt) #if(post.isNew){<span class="badge badge-success">Today</span>}</td>
+                <td>#(post.category.name)</td>
+                <td>#(post.likes)</td>
+                <td>#(post.unlikes)</td>
+                <td>
+                  <a href="posts/remove/#(post.id)" role="button" class="btn btn-danger btn-sm" style="color: white;"><i class="fa fa-trash"></i></a>
+                  #equal(post.is_published, "false") {
+                    <a href="posts/accept/#(post.id)" role="button" class="btn btn-success btn-sm" style="color: white;"><i class="fa fa-check"></i></a>
+                    <a href="posts/reject/#(post.id)" class="btn btn-warning btn-sm" style="color: white;"><i class="fa fa-ban"></i></a>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      #paginator(posts)
+    </div>
+  </div>
+  #embed("admin/footer")
+}

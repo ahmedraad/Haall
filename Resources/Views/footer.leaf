@@ -1,0 +1,7 @@
+<footer class="footer">
+	<div class="container">
+		<p style="margin-bottom: 0px; font-size: 0.8em;text-align: center;">
+		    Made with  <i class="fa fa-heart" style="color: red;"></i> in Baghdad
+		 </p>
+	</div>
+</footer>

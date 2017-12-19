@@ -1,0 +1,7 @@
+#extend("base")
+
+#export("title") { Haall - حل }
+
+#export("content") {
+  <h3>#(user.name)</h3>
+}

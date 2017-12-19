@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light custom-nav">
+  <a class="navbar-brand" href="/">
+    <img src="/images/logo.png" width="40" height="40" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#()navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      #loop(categories, "category") {
+        <a class="nav-item nav-link #equal(current_category.id, category.id){active}" href="/category/#(category.id)"><i class="fa #(category.icon)" aria-hidden="true"></i> #(category.name)</a>
+      }
+      #if(user) {
+        &nbsp;&nbsp;
+        <button class="btn btn-success" data-toggle="modal" data-target="#()addModal" type="button">أضف حل</button>
+        #if(user.admin) {
+          &nbsp;&nbsp;
+          <a class="btn btn-success" href="/dashboard">Dashboard</a>
+        }
+      }
+    </div>
+  </div>
+  <div class="navbar-nav left">
+    #if(user) {
+      <div class="dropdown">
+        <a class="navbar-brand" href="#()" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span><small class="text-info">#(user.name)</small></span> &nbsp;
+          <img class="user-profile-img" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" width="40" height="40" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- <a class="dropdown-item text-info" href="/profile"><i class="fa fa-user" aria-hidden="true"></i> الملف الشخصي</a> -->
+          <a class="dropdown-item text-info" href="/logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> تسجيل خروج </a>
+        </div>
+      </div>
+    } ##else() {
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#()loginModal" type="button">دخول</button>&ensp;
+      <button class="btn btn-success" data-toggle="modal" data-target="#()registerModal" type="button">تسجيل حساب</button>
+    }
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h3 class="display-3">شارك حلولك للمجتمع <i class="fa fa-smile-o" aria-hidden="true"></i></h3>
+    <p class="lead">كن انت المساهم في تغيير المجتمع من خلال طرحك للحلول .</p>
+  </div>
+</div>

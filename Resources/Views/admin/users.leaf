@@ -1,0 +1,66 @@
+#extend("admin/base")
+
+#export("title") {
+  Dashboard - Users
+}
+
+#export("content") {
+  #embed("admin/nav")
+  #embed("alerts")
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">users</li>
+      </ol>
+      <div class="table-responsive">
+        <table class="table table-bordered" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Is Active</th>
+              <th>Is Banned</th>
+              <th>Posts</th>
+              <th>Created At</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            #loop(users.data, "user") {
+              <tr>
+                <td><a href="/dashboard/users/#(user.id)">#(user.name)</a></td>
+                <td>#(user.email)</td>
+                #if(user.is_verified) {
+                  <td><span class="badge badge-success">#(user.is_verified)</span></td>
+                } ##else() {
+                  <td><span class="badge badge-danger">#(user.is_verified)</span></td>
+                }
+                #if(user.is_banned) {
+                  <td><span class="badge badge-warning">#(user.is_banned)</span></td>
+                } ##else() {
+                  <td><span class="badge badge-secondary">#(user.is_banned)</span></td>
+                }
+                <td>#(user.posts_count)</td>
+                <td>#(user.createdAt)</td>
+                <td>
+                  <a href="/dashboard/users/remove/#(user.id)" role="button" class="btn btn-danger btn-sm" style="color: white;"><i class="fa fa-trash"></i></a>
+                  #if(user.is_banned) {
+                    <a href="/dashboard/users/unban/#(user.id)" class="btn btn-success btn-sm" style="color: white;"><i class="fa fa-check"></i></a>
+                  } ##else() {
+                    <a href="/dashboard/users/ban/#(user.id)" class="btn btn-warning btn-sm" style="color: white;"><i class="fa fa-ban"></i></a>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      #paginator(users)
+    </div>
+  </div>
+  #embed("admin/footer")
+}

@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+html, body {
+	direction: rtl;
+	background: #FAFAFA;
+}
+
+h5, label {
+	font-family: 'Droid Arabic Kufi', serif;
+}
+
+pre {
+	white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+	width:100%;/*set appropriate width you want*/
+overflow-y:hidden;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  height: 80px;
+}
+
+.custom-nav {
+	background: white;
+	-webkit-box-shadow: 0 8px 6px -6px #EFEFEF;
+  -moz-box-shadow: 0 8px 6px -6px #EFEFEF;
+  box-shadow: 0 8px 6px -6px #EFEFEF;
+}
+
+.navbar-nav {
+	margin-right: 30px;
+}
+
+.user-profile-img {
+	border-radius: 50%;
+}
+
+.nav-item {
+	font-family: 'Droid Arabic Kufi', serif;
+}
+
+.card-header-title {
+	font-family: 'Droid Arabic Kufi', serif;
+}
+
+.dropdown-menu {
+	border-width: 0;
+	background: white;
+	box-shadow: 0px 5px 70px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+	font-family: 'Droid Arabic Kufi', serif;
+	text-align: right;
+}
+
+.btn {
+	font-family: 'Droid Arabic Kufi', serif;
+	color: white;
+}
+
+.btn-success {
+	background-color: #58C999;
+	border-color: #58C999;
+}
+
+.btn-outline-success {
+	color: 	#2ED1AE;
+	border-color: #2ED1AE;
+}
+
+.btn-outline-success:hover {
+	color: 	#27B697;
+	border-color: #27B697;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.btn-success:hover {
+	background-color: #27B697;
+	border-color: #27B697;
+	cursor: pointer;
+}
+
+
+
+/* Custom Cards*/
+
+.card-columns {
+	padding: 20px;
+}
+
+.card {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+	display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+	-webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+	border-radius: 0;
+	border: 0;
+}
+
+.card-link a {
+	text-decoration: none;
+}
+
+.card:active {
+  box-shadow: none;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.card-category {
+	display: inline-block;
+  padding: 8px 10px;
+  margin: 0 0 10px;
+  color: #FFF;
+  font-size: 1.2rem;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+	background: #58C999;
+	font-family: 'Droid Arabic Kufi', serif;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.card-header {
+	background: #F2F2F2;
+}
+
+.new-post-header {
+	background: #58C999;
+}
+
+.card-header:first-child {
+	border-radius: 0;
+	border: 0;
+	padding-top: 1px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.card-footer {
+	background: white;
+	border-width: 0;
+}
+
+.card-title {
+	font-family: 'Droid Arabic Kufi', serif;
+	font-size: 1.4em;
+	line-height: 1.8em;
+	color: #58C999;
+}
+.user-details {
+	margin-bottom: 10px;
+}
+
+.card-text {
+	font-family: 'Droid Arabic Kufi', serif;
+	font-size: 1.0em;
+	color: #737373;
+	line-height: 1.7em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	max-height: 700px;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+}
+
+.card-text-single-post {
+	font-family: 'Droid Arabic Kufi', serif;
+	font-size: 1.0em;
+	color: #737373;
+	line-height: 1.7em;
+}
+
+.card-header {
+	max-height: 20px;
+}
+
+.card-block {
+	padding: 5px 20px 15px 20px;
+}
+
+.single-post:active {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+	-webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+	transition: 0s;
+}
+
+canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+}
+
+.pagination {
+	padding-right: 0px;
+}
+
+.single-card-columns {
+
+}
+
+.btn-link {
+	font-family: 'Tahoma', serif;
+}
+
+.btn-link {
+	border: 0;
+}
+
+.btn-link:hover, .btn-link:focus {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+
+.btn-like {
+	color: #737373;
+}
+
+.btn-unlike {
+	color: #737373;
+}
+
+.display-3 {
+	font-family: 'Droid Arabic Kufi', serif;
+	font-size: 2em;
+	color: #58C999;
+}
+
+.lead {
+	font-family: 'Droid Arabic Kufi', serif;
+	color: #737373;
+}
+
+@media (min-width: 544px) {
+  .card-columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+@media (min-width: 991px) {
+  .card-columns {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+
+#share {
+	width: 100%;
+  text-align: center;
+}
+
+/* buttons */
+
+#share a {
+		width: 31px;
+  	height: 31px;
+  	display: inline-block;
+  	border-radius: 50%;
+  	font-size: 20px;
+  	color: #fff;
+		opacity: 0.75;
+		margin-left: 2px;
+		padding-left: 3px;
+		padding-right: 3px;
+		transition: opacity 0.15s linear;
+}
+
+#share a:hover {
+	opacity: 1;
+}
+
+/* icons */
+
+#share i {
+  	position: relative;
+  	top: 35%;
+  	transform: translateY(-50%);
+}
+
+/* colors */
+
+.facebook {
+ 	background: #3b5998;
+}
+
+.twitter {
+  	background: #55acee;
+}
+
+.blank-state {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 40px 20px;
+  font-size: 100%;
+  color: #737373;
+  text-align: center;
+}
+.blank-state h1, .blank-state p {
+	font-family: 'Droid Arabic Kufi', serif;
+  font-weight: 300;
+}
+.blank-state p {
+  margin-bottom: 15px;
+}
+
+.blank-state i {
+	font-size: 2em;
+}
+
+.blank-state.blank-state-lg {
+	font-family: 'Droid Arabic Kufi', serif;
+  padding: 90px 45px;
+  font-size: 150%;
+}
+.blank-state.blank-state-sm {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+  font-size: 85%;
+}
+
+
+.user-posts {
+	padding: 10px 30px 10px 30px;
+}
+.user-posts h3 {
+	font-family: 'Droid Arabic Kufi', serif;
+	color: #58C999;
+}
+.user-posts p {
+	font-family: 'Droid Arabic Kufi', serif;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #737373;
+}

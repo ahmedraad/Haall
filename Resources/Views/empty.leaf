@@ -1,0 +1,8 @@
+<div class='container'>
+  <div class='blank-state blank-state-lg'>
+      <i class='fa fa-frown-o'></i>
+      <h2>لا يوجد محتوى</h2>
+      <p>للأسف يبدوا انه ليس هناك مواضيع في هذه الصفحة حتى الآن</p>
+      <a class="btn btn-primary" href="/" role="button">الرجوع الى الرئيسية</a>
+    </div>
+</div>

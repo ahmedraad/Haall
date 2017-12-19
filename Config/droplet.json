@@ -1,0 +1,21 @@
+{
+    "server": "engine",
+    "client": "engine",
+    "console": "terminal",
+    "cryto": "bcrypt",
+    "log": "console",
+    "cipher": "crypto",
+    "view": "leaf",
+    "cache": "redis",
+    
+    "middleware": [
+        "redis",
+        "error",
+        "date",
+        "file"
+    ],
+    
+    "commands": [
+        "prepare"
+    ]
+}

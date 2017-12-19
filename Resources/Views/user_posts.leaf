@@ -1,0 +1,19 @@
+#extend("base")
+
+#export("title") {
+  حلول - #(ofUser.name)
+}
+
+#export("content") {
+  #embed("header")
+  <div class="bd-callout user-posts">
+    <h3>#(ofUser.name)</h3>
+    <p>لديه #(ofUser.posts_count) حلول</p>
+  </div>
+  #embed("posts")
+  #embed("auth")
+  #embed("pagination")
+  #embed("footer")
+  #embed("alerts")
+  <script src="/js/app.js"></script>
+}

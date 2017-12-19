@@ -1,0 +1,14 @@
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+
+*.pins
+*.xcuserstate
+*.xcworkspacedata
+
+/Config/development/
+
+# Flock
+.flock/.build
+.flock/Packages
