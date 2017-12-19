@@ -2,7 +2,7 @@ Haall - حَل
 ===================
 
 
-Is an open source project buit with - **Vapor 3** .
+Is an open source project built with - **Vapor 3** .
 
 ----------
 
