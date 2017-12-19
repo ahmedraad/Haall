@@ -19,4 +19,4 @@ Installation
 Notes!
 ------------
 Be sure to setup your database and `Redis` server. 
-You can setup your database information in `Config/mysql.json`
+You can change your database information in `Config/mysql.json`
